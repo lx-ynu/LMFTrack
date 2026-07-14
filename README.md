@@ -415,19 +415,7 @@ The citation information will be updated after publication.
 
 ## Acknowledgements
 
-This project benefits from the following excellent open-source tracking frameworks and implementations:
-
-- [TBSI](https://github.com/RyanHTR/TBSI) — *Bridging Search Region Interaction With Template for RGB-T Tracking*. We thank the authors for providing the RGB-T tracking framework, training and evaluation pipeline, and related implementation resources.
-
-- [CiteTracker](https://github.com/NorahGreen/CiteTracker) — *CiteTracker: Correlating Image and Text for Visual Tracking*. We thank the authors for sharing their vision-language tracking implementation and valuable code related to visual-textual target representation.
-
-- [ViPT](https://github.com/jiawen-zhu/ViPT) — *Visual Prompt Multi-Modal Tracking*. We thank the authors for releasing their multimodal tracking framework and visual prompt learning implementation.
-
-- [OSTrack](https://github.com/botaoye/OSTrack) — *Joint Feature Learning and Relation Modeling for Tracking: A One-Stream Framework*. We thank the authors for providing the one-stream tracking backbone, pretrained models, and training and evaluation framework.
-
-LMFTrack also uses the official [OpenAI CLIP](https://github.com/openai/CLIP) implementation for image-text representation and the [timm](https://github.com/huggingface/pytorch-image-models) library for vision-model components.
-
-We sincerely thank the authors and maintainers of these projects for making their code, pretrained models, and research resources publicly available. Their contributions have significantly facilitated the development and reproducibility of this work.
+We sincerely thank the authors of [TBSI](https://github.com/RyanHTR/TBSI), [CiteTracker](https://github.com/NorahGreen/CiteTracker), [ViPT](https://github.com/jiawen-zhu/ViPT), [OSTrack](https://github.com/botaoye/OSTrack), and [OpenAI CLIP](https://github.com/openai/CLIP) for making their excellent code and models publicly available.
 
 ## Contact
 
