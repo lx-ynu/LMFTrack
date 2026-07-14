@@ -26,6 +26,70 @@ LMFTrack consists of three principal components:
 
 LMFTrack first generates a category-level semantic prompt from the RGB template maintained by the online tracking pipeline. The generated semantic prompt is incorporated into the RGB and TIR feature representations. MCSAII jointly models contextual dependencies and multi-scale spatial structures, while MMSCF selectively preserves dominant cross-modal channel correspondences through channel-wise Top-K sparse cross-attention.
 
+## Installation
+
+### Environment
+
+LMFTrack was developed and evaluated using the following principal environment:
+
+| Component | Version |
+|:---|:---|
+| Operating system | Ubuntu 22.04 |
+| Python | 3.9 |
+| PyTorch | 1.10.0 |
+| Torchvision | 0.11.0 |
+| Torchaudio | 0.10.0 |
+| CUDA Toolkit | 11.3 |
+| CLIP implementation | Official OpenAI CLIP |
+| CLIP backbone | ViT-B/32 |
+| CLIP embedding dimension | 512 |
+
+CSPG adopts the official OpenAI CLIP implementation with the ViT-B/32 backbone. The image and text embeddings are both 512-dimensional. The CLIP image and text encoders remain frozen during training and inference, while the shared lightweight adapter and the prompt projection layer are jointly optimized with the tracker.
+
+### Create the Conda Environment
+
+```bash
+conda create -n lmftrack python=3.9 -y
+conda activate lmftrack
+```
+
+### Install the Dependencies
+
+Clone the repository:
+
+```bash
+git clone https://github.com/lx-ynu/LMFTrack.git
+cd LMFTrack
+```
+
+Run the installation script:
+
+```bash
+bash install.sh
+```
+
+Alternatively, make the script executable before running it:
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+The installation script installs PyTorch 1.10.0, Torchvision 0.11.0, Torchaudio 0.10.0, CUDA Toolkit 11.3, the official OpenAI CLIP implementation, and the principal dependencies required by LMFTrack.
+
+### Verify the Installation
+
+```bash
+python -c "import torch, torchvision, clip; print('PyTorch:', torch.__version__); print('Torchvision:', torchvision.__version__); print('CLIP:', clip.__file__)"
+```
+
+The expected PyTorch and Torchvision versions are:
+
+```text
+PyTorch: 1.10.0
+Torchvision: 0.11.0
+```
+
 ## Main Results
 
 ### Quantitative Comparison
