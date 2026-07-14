@@ -433,5 +433,4 @@ We sincerely thank the authors and maintainers of these projects for making thei
 
 For questions regarding the implementation or experiments, please contact:
 
-- Xiang Liu
-- Haiyan Li: `leehy@ynu.edu.cn`
+- Xiang Liu:`liuxiang1@stu.ynu.edu.cn`
