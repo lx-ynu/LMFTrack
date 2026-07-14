@@ -17,10 +17,55 @@ LMFTrack consists of three principal components:
 ## Framework
 
 <p align="center">
-  <img src="assets/LMFTrack_framework.png" width="95%" alt="LMFTrack Framework">
+  <img src="assets/LMFTrack.png" width="100%" alt="Overall framework of LMFTrack">
 </p>
 
-The overall framework first generates a category-level semantic prompt from the maintained RGB template. The generated prompt is incorporated into the RGB and TIR feature-extraction and interaction processes. MCSAII enhances contextual and multi-scale structural representations, while MMSCF performs selective sparse cross-modal fusion.
+<p align="center">
+  <b>Overall architecture of the proposed LMFTrack framework.</b>
+</p>
+
+LMFTrack first generates a category-level semantic prompt from the RGB template maintained by the online tracking pipeline. The generated semantic prompt is incorporated into the RGB and TIR feature representations. MCSAII jointly models contextual dependencies and multi-scale spatial structures, while MMSCF selectively preserves dominant cross-modal channel correspondences through channel-wise Top-K sparse cross-attention.
+
+## Main Results
+
+### Quantitative Comparison
+
+<p align="center">
+  <img src="assets/LMFTrack_Results.png" width="95%" alt="Quantitative comparison of LMFTrack">
+</p>
+
+<p align="center">
+  <b>Performance comparison on GTOT, RGBT234, and LasHeR.</b>
+</p>
+
+### LasHeR Precision and Success Curves
+
+<p align="center">
+  <img src="assets/LMFTrack_LasHeR.png" width="100%" alt="Precision and success curves on LasHeR">
+</p>
+
+<p align="center">
+  <b>Precision and success plots on the LasHeR testing set.</b>
+</p>
+
+### Attribute-based Evaluation on LasHeR
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/LMFTrack_LasHeR_Att_PR.png" width="100%" alt="Attribute-based precision comparison on LasHeR">
+      <br>
+      <b>Attribute-based PR comparison</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/LMFTrack_LasHeR_Att_SR.png" width="100%" alt="Attribute-based success comparison on LasHeR">
+      <br>
+      <b>Attribute-based SR comparison</b>
+    </td>
+  </tr>
+</table>
+
+The attribute-based evaluation covers 19 challenging conditions in LasHeR, including occlusion, illumination variation, low resolution, deformation, background clutter, similar appearance, thermal crossover, motion blur, camera motion, fast motion, scale variation, and aspect-ratio change.
 
 ## Main Components
 
