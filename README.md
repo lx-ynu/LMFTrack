@@ -387,18 +387,7 @@ Please update this section according to the actual directory structure of the re
 
 ## Reproducibility
 
-This repository is intended to provide:
-
-- Complete training code
-- Complete evaluation code
-- Dataset-processing scripts
-- Experimental configuration files
-- Pretrained-backbone information
-- Trained LMFTrack checkpoints
-- Implementations of CSPG, MCSAII, and MMSCF
-- Instructions for reproducing the principal benchmark results
-
-For the repeated-run stability analysis reported in the paper, the principal ablation settings were independently trained three times.
+This repository provides the training and evaluation code, configuration files, pretrained model information, and implementations of CSPG, MCSAII, and MMSCF for reproducing the main experimental results reported in the paper.
 
 ## Citation
 
